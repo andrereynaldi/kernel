@@ -2,10 +2,16 @@ diff --git a/drivers/net/wireless/realtek/Kconfig b/drivers/net/wireless/realtek
 --- a/drivers/net/wireless/realtek/Kconfig
 +++ b/drivers/net/wireless/realtek/Kconfig
 @@
+ source "drivers/net/wireless/realtek/rtlwifi/Kconfig"
+ source "drivers/net/wireless/realtek/rtw88/Kconfig"
+ source "drivers/net/wireless/realtek/rtw89/Kconfig"
 +source "drivers/net/wireless/realtek/rtl8189fs/Kconfig"
 
 diff --git a/drivers/net/wireless/realtek/Makefile b/drivers/net/wireless/realtek/Makefile
 --- a/drivers/net/wireless/realtek/Makefile
 +++ b/drivers/net/wireless/realtek/Makefile
 @@
+ obj-$(CONFIG_RTLWIFI) += rtlwifi/
+ obj-$(CONFIG_RTW88) += rtw88/
+ obj-$(CONFIG_RTW89) += rtw89/
 +obj-$(CONFIG_RTL8189FS) += rtl8189fs/
