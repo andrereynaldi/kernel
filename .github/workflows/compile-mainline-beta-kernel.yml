@@ -97,6 +97,9 @@ on:
 env:
   TZ: Etc/UTC
 
+permissions:
+  contents: write
+  
 jobs:
   build:
     runs-on: ubuntu-24.04-arm
@@ -204,7 +207,7 @@ jobs:
           removeArtifacts: false
           replacesArtifacts: true
           makeLatest: true
-          token: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           body: |
             - These kernels can be used for `Armbian`, `OpenWrt` and `FnNAS`.
             - These are mainline `beta` kernels that may contain experimental features. Do not use unless you know what you are doing.
